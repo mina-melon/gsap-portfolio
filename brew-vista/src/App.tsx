@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router";
-import Hero from "./components/Hero.tsx";
+import LandingPage from "./components/Main.tsx";
 
 function App() {
   return (
     <Routes>
-      <Route path={"/"} element={<Hero />} />
+      <Route path={"/"} element={<LandingPage />} />
     </Routes>
   );
 }

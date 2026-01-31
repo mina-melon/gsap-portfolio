@@ -2,31 +2,42 @@
 @import "../index.css";
 
 @layer components {
-    .hero {
-        @apply flex flex-row justify-between px-8 py-4;
+  #hero {
+    @apply z-10 min-h-dvh w-screen overflow-hidden;
 
-        .nav {
-            @apply flex flex-row justify-between items-center w-full h-13.5;
-
-            .logo {
-                @apply text-[24px] text-accent font-playfair font-medium;
-            }
-
-            .container-nav {
-                @apply flex flex-row justify-center items-center gap-6;
-
-                .links-nav {
-                    @apply flex flex-row  gap-3;
-
-                    li {
-                        @apply font-medium text-accent text-sm;
-                    }
-                }
-
-                button {
-                    @apply text-cream bg-accent px-6 py-3;
-                }
-            }
-        }
+    .hero-text {
+      @apply md:pt-18 pt-36;
+      h1 {
+        @apply bg-linear-text bg-clip-text lg:text-[270px] text-[170px] font-extrabold text-transparent font-playfair antialiased leading-none text-center;
+      }
     }
+
+    .subhero {
+      @apply px-10 py-8 flex flex-row justify-between items-center;
+
+      .subhero-text {
+        @apply flex flex-col gap-6 w-[48%] md:w-[24%];
+
+        p {
+          @apply text-accent font-bold text-base;
+        }
+        button {
+          @apply text-cream bg-accent px-5 py-3 rounded-2xl text-base hover:bg-hover-accent cursor-pointer w-fit;
+        }
+      }
+      .subhero2{
+        @apply w-60 md:w-80 hidden md:block; 
+      p{
+        @apply md:text-[42px] text-[30px] font-playfair font-medium text-accent leading-12;
+      }
+    }
+      
+    }
+    .left-coffee {
+        @apply absolute -left-20 -bottom-25 w-50 rotate-20;
+      }
+  }
+  video{
+    @apply w-full md:h-[80%] h-1/2 absolute -bottom-40 left-0 md:object-contain object-bottom object-cover;
+  }
 }

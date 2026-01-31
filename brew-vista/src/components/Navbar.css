@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+@import "../index.css";
+
+@layer components{
+  nav {
+      @apply fixed z-50 w-full flex flex-col md:flex-row  md:justify-between items-center gap-5 h-fit px-10 py-4 bg-cream-deep;
+
+      .logo {
+        @apply text-[24px] text-accent font-playfair font-medium;
+      }
+
+      .container-nav {
+        @apply flex flex-row justify-center items-center gap-14 w-fit;
+
+        .links-nav {
+          @apply flex flex-row gap-10 w-fit;
+
+          .link-item {
+            @apply font-medium text-accent text-sm hover:underline hover:scale-[1.1] transition ease-in-out duration-500 cursor-pointer hover:text-hover-accent;
+          }
+        }
+
+        button {
+          @apply text-cream bg-accent px-5 py-3 rounded-2xl text-sm hover:bg-hover-accent cursor-pointer w-fit;
+        }
+      }
+    }
+}

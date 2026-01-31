@@ -2,33 +2,43 @@
 @import "tailwindcss";
 
 :root {
-    --font-playfair: "Playfair Display", serif;
-    --font-poppins: "Poppins", sans-serif;
-    --background-image-radial-gold: radial-gradient(
-            circle at center,
-            #EBC0A4 0%,
-            #D19369 100%
-    );
-    --color-accent: #400E03;
-    --color-cream: #F6CEAA;
+  --font-playfair: "Playfair Display", serif;
+  --font-poppins: "Poppins", sans-serif;
+  --color-accent: #400e03;
+  --color-laccent: #591000;
+  --color-cream: #f6ceaa;
+  --color-cream-deep: #d69c75;
+  --background-image-radial-gold: radial-gradient(
+    circle at center,
+    #ebc0a4 0%,
+    #d19369 100%
+  );
+  --background-image-linear-text: linear-gradient(90deg, #400e03, #a62408);
 }
 
 @theme inline {
-    --font-poppins: var(--font-poppins);
-    --font-playfair: var(--font-playfair);
-    --background-image-radial-gold: var(--background-image-radial-gold);
-    --color-accent: var(--color-accent);
-    --color-cream: var(--color-cream);
+  --font-poppins: var(--font-poppins);
+  --font-playfair: var(--font-playfair);
+  --color-accent: var(--color-accent);
+  --color-hover-accent: var(--color-laccent);
+  --color-cream: var(--color-cream);
+  --color-cream-deep: var(--color-cream-deep);
+  --background-image-radial-gold: var(--background-image-radial-gold);
+  --background-image-linear-text: var(--background-image-linear-text);
 }
 
-@layer utility {
-    .bg-radial {
-        @apply bg-radial-gold;
-    }
+@layer utilities {
+  .bg-radial {
+    @apply bg-radial-gold;
+  }
 }
+
 
 @layer components {
-    body {
-        @apply font-poppins;
-    }
+  body {
+    @apply font-poppins;
+  }
+  main{
+    @apply w-full overflow-x-hidden;
+  }
 }
