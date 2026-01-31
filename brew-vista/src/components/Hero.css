@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "../index.css";
+
+@layer components {
+    .hero {
+        @apply flex flex-row justify-between px-8 py-4;
+
+        .nav {
+            @apply flex flex-row justify-between items-center w-full h-13.5;
+
+            .logo {
+                @apply text-[24px] text-accent font-playfair font-medium;
+            }
+
+            .container-nav {
+                @apply flex flex-row justify-center items-center gap-6;
+
+                .links-nav {
+                    @apply flex flex-row  gap-3;
+
+                    li {
+                        @apply font-medium text-accent text-sm;
+                    }
+                }
+
+                button {
+                    @apply text-cream bg-accent px-6 py-3;
+                }
+            }
+        }
+    }
+}
